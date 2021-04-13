@@ -36,7 +36,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	repository := repo.Repo{Owner: repoOwner, Name: repoName, ApiUrl: apiUrl}
+	repository := repo.Repo{
+		Owner:         repoOwner,
+		Name:          repoName,
+		Branch:        branch,
+		ApiUrl:        apiUrl,
+		VersionPrefix: versionPrefix,
+	}
 
 	switch flag.Arg(0) {
 	case "version":

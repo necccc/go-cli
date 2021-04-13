@@ -11,7 +11,7 @@ import (
 )
 
 type Repo struct {
-	Owner, Name, ApiUrl string
+	Owner, Name, ApiUrl, Branch, VersionPrefix string
 }
 
 func createOauthClient() *http.Client {
